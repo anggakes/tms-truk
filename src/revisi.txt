@@ -1,0 +1,1 @@
+WHERE NOT EXISTS (SELECT  NULL FROM t_right r WHERE   r.value = l.value)

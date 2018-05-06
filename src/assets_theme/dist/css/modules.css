@@ -1,0 +1,939 @@
+@charset "utf-8";
+/* CSS Document */
+.service_status{
+	background:#07d851;
+	text-align:center;
+	padding:10px;
+	color:#fff;
+	display:block;
+}
+.ul.ul_down li{
+	list-style:none;
+}
+.bg-abu{
+	background:#ccc;
+}
+
+table#invoice-table{
+	width:100%;
+	
+	
+
+}
+
+#table-summary{
+	font-size:12px;
+}
+
+
+#table-summary td.Tidak.Baik{
+	background:#ee3d25;
+	text-align:center;
+	
+}
+
+#table-summary td.Baik{
+	background:#35ec11;
+	text-align:center;
+	
+}
+
+
+#form_search_invoice label.error{
+	display:block;
+	margin-bottom:5px;
+	margin-top:5px;
+	color:#F00;
+	font-weight:normal;
+	font-size:12px
+}
+
+table#invoice-table th,table#invoice-table td{
+	padding:10px;	
+	border:solid 1px #ccc;
+	text-align:center;
+}
+
+.box-body.pod{
+	padding:0;
+}
+.textarea_room_service{
+	width:165px;
+}
+.btn-table {
+    float: left;
+    width: 50px !important;
+    padding: 5px;
+}
+
+.bg-yellow{
+	background:#fcff03;
+}
+
+
+.blue.circle{
+	width:10px;
+	height:10px;
+	background:#1246f0;
+	display:inline-block;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.green.circle{
+	width:10px;
+	height:10px;
+	background:#22f012;
+	display:inline-block;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.yellow.circle{
+	width:10px;
+	height:10px;
+	background:#ecff15;
+	display:inline-block;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.orange.circle{
+	width:10px;
+	height:10px;
+	background:#ffa70d;
+	display:inline-block;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.tiga_input {
+    float: left;
+    width: 298px;
+    margin-right: 10px;
+}
+.checklist.tiga_input {
+    width: 10px;
+    margin-top: 8px;
+}
+.tiga_input.time{
+	margin-right:0;
+}
+.search_button_manifest{
+    border: none;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding: 7px 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search_manifest{
+	float:left;
+	width:200px;
+	margin-right:10px;
+}
+ul.accounting li{
+	
+}
+
+.status_trucking{
+	width:10px;
+	height:10px;
+	margin:0 auto;
+	background:#ccc;
+	-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+}
+.status_trucking.red{background:#fd3c01;}
+.status_trucking.green{background:#12d412;}
+
+.small-box>.inner{
+	height:220px;
+}
+
+.order{
+	width:100px;
+	text-align:center;
+}
+
+.qty_approved_io
+{width:50px;
+	text-align:center;}
+
+.qty_received{
+	
+	width:100px;
+	text-align:center;
+}
+#confirmed_manifest{
+	cursor:pointer;
+}
+#confirmed_additional_cost{
+	cursor:pointer;
+}
+.text_description{
+	float:left;
+	border-bottom:solid 1px #ccc;
+	width:100%;
+	text-align:left;
+	padding-bottom:10px;
+	margin-bottom:10px;
+}
+.drag.draggable{
+	 cursor: move;
+}
+.route_planning{
+	background:#ccc;
+}
+.height200 {
+    height: 200px;
+    overflow-x: auto;
+    overflow-y: auto;
+	background:#eeeeee;
+}
+#tabs{
+	border-radius:0;
+}
+.ui-widget-header{
+	background:#ccc !important;
+	border-color:#ccc !important;
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited{
+	color:#000;
+	border-color:#ccc !important;
+}
+
+
+.ui-widget-content{
+	border-color:#ccc !important;
+}
+
+#search_vehicle{}
+
+#search_vehicle{
+	padding:5px;
+	border:solid 1px #ccc;
+	width:300px;
+	float:left;
+	
+}
+td.vehicle_color{
+	background:#ffc90f !important;
+	color:#000;
+	cursor:pointer;
+}
+td.vehicle_color.edit_vehicle_id{
+	background:#2faa05 !important;
+	color:#fff;
+	cursor:pointer;
+}
+
+.tr.droppable.hovered td{
+	background:#2d80f1 !important;
+	color:#000;
+}
+
+#table_add_vehicle tr.active td{
+	background:#59cbfa;
+	color:#fff;
+	cursor:pointer;
+}
+#table_add_vehicle{
+	border:solid 1px #ccc;
+	width:100%;
+	
+}
+#table_add_vehicle th{
+	background:#ffe75f;
+	color:#000;
+	padding:10px;
+	border:solid 1px #000;
+	text-align:center;
+}
+
+#table_add_vehicle td{
+	color:#000;
+	background:#fff;
+	padding:10px;
+	border:solid 1px #000;
+	text-align:center;
+}
+
+#search_button_vehicle {
+    float: left;
+    margin-left: 10px;
+    border: none;
+    color: #fff;
+    padding: 6px;
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+#add-data-vehicle{
+	cursor:pointer;
+
+}
+
+.ui-widget-content label{
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+	font-size:14px;
+}
+
+.available .small-box>.inner{
+	height:260px;
+}
+
+ul.ul_down li{
+	margin-top:5px;
+	margin-bottom:5px;
+	list-style:none;
+}
+.box_room_service span{
+	display:block;
+}
+.box_room_service h4{
+	text-align:center;
+	border-bottom:solid 1px #fff;
+	padding-bottom:10px;
+	
+}
+.status_repair{
+	text-align:center;
+}
+
+.truck_id{
+	margin-top:10px;
+	text-align:center;
+}
+.user-panel-inner{
+	color:#FFF;
+}
+.check-box-div {
+    float: left;
+    margin-right: 5px;
+    margin-top: -3px;
+}
+
+#import-data{
+	cursor:pointer;
+}
+
+#delete-data{
+	cursor:pointer;
+}
+
+#add-data{
+	cursor:pointer;
+}
+
+.box.sms{
+	min-height:400px;}
+	
+#wrapper-search{
+	margin-bottom:10px;}
+
+#wrapper-search input#search,#wrapper-search input#store_name,#wrapper-search input#motorist_code{
+	width:200px;}
+
+#wrapper-search input#date{
+    padding: 10.5px;
+    border: solid 1px #CCC;
+    width: 200px;
+    margin-right: 5px;
+}
+.link_action{
+	cursor:pointer;
+	display:inline-block;
+}
+table#example2 th{
+	background:#52bbe7;
+	
+	}
+
+.button-search{
+	left:0;}
+
+
+.code-block-holder pre {
+      max-height: 188px;  
+      min-height: 188px; 
+      overflow: auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+}
+
+
+.tab-btn-holder {
+	width: 100%;
+	margin: 20px 0 0;
+	border-bottom: 1px solid #dfe3e4;
+	min-height: 30px;
+}
+
+.tab-btn-holder a {
+	background-color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #006bb8;
+	text-decoration: none;
+	display: inline-block;
+	*zoom:1; *display:inline;
+
+
+}
+
+.tab-btn-holder a.active {
+	color: #858585;
+    padding: 9px 10px 8px;
+    border: 1px solid #dfe3e4;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -1px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+    z-index: 300;
+}
+
+
+#wrapper-search #search,#wrapper-search #store_name,#wrapper-search #motorist_code{
+	padding:10.5px;
+	border:solid 1px #CCC;
+	margin-right:5px;}
+#wrapper-search #submit {
+    background: #1ba0d8;
+    color: #FFF;
+    padding: 11.5px;
+    border: none;
+    position: relative;
+    left: -3px;
+}
+#wrapper-search{
+	float: right;
+	/* width:100%; */
+	}
+#wrapper-button{
+	float:right;
+	width:100%;
+	margin-bottom:10px;}
+#clear-search{
+	background: #339e04;
+    color: #FFF;
+    padding: 12.5px;
+    border: none;
+    position: relative;
+	display: inline-block;}
+
+	#edit_vehicle_manifest{
+		cursor:pointer;
+	}
+#wrapper-button-full .button{
+	display:block;
+	padding:7px;
+	color:#FFF;
+	float:right;
+	
+	margin-left:5px;
+	}
+#wrapper-button .button{
+	display:block;
+	padding:7px;
+	color:#FFF;
+	float:left;
+	
+	margin-left:5px;
+	}
+	
+.green-button{
+	background:#1db6bd;
+	}
+
+.blue-button{
+	background: #1ba0d8;
+	}
+
+.orange-button{
+	background:#ff961b;
+	}
+
+.alert{
+	padding:5px;
+	}
+	
+.alert.alert-success{
+	background:#1fd407l;
+	}
+	
+.alert.alert-danger{
+	background:#fb0909;
+	}
+
+.error-box{
+	margin:10px;
+	background:#e1b2b2;
+	border:solid 1px #F00;
+	padding:10px;
+	color:#FFF;
+	}
+
+.form-control.error{
+	border:solid 1px #F00;}
+
+.form-group p{
+	font-size:12px;
+	color:#F00;
+	font-style:italic;}
+
+.pagination.page{
+	border-radius:0;}
+
+.pagination.page strong{
+	display:inline-block;
+	padding:5px;
+	border:solid 1px #999;}
+
+.pagination.page a{
+	display:inline-block;
+	padding:5px;
+	border:solid 1px #999;}
+	
+.btn-red{
+	background:#F00;
+	color:#FFF;}
+
+.btn-red:hover{
+	background:#f8576d;
+	color:#FFF;
+	}
+
+
+.btn-blue{
+	background:#52bbe7;
+	color:#FFF;}
+
+.btn-blue:hover{
+	background:#19a0d8;
+	color:#FFF;}
+form.advance-search{
+	width:100%;}
+#search-distributor{
+	float:left;
+	padding:10px;
+	color:#FFF;
+	background:#5cb0ff;
+	text-align:center;
+	cursor:pointer;
+	width:250px;
+	}
+#wrapper-distributor-search{
+	width:250px;
+	float:left;}
+.wrapper-search-item{
+	position:relative;}
+.advance-search .search-item {
+    border: solid 1px #CCC;
+    padding: 5px;
+    height: 300px;
+    position: absolute;
+    width: 250px;
+    background: #fff;
+    top: 39px;
+}
+.search-item{
+	/*display:none;*/}
+.advance-search #submit {
+    background: #1ba0d8;
+    color: #FFF;
+    padding: 6px;
+    border: none;
+    position: relative;
+    left: 10px !important;
+	display:block;
+}
+
+.search-input{
+	border:solid 1px #CCC;
+	padding:5px;
+	display:block;
+	width:100%;}
+
+.list-item ul{
+	padding:0;}
+	
+.list-item ul li{
+	list-style:none;
+	padding:0;
+	margin:0;}
+
+.list-item select{
+	width:100%;}
+
+.select-filter{
+	float:left;
+	width:300px;
+	margin-right:5px;}
+
+table.po .qty,table.edit_po .qty{
+	width:50px;
+	text-align:center;
+}
+
+.pq-select-option-label > span{
+	font-size:12px;}
+
+div.pq-select-button{
+	border-radius:0 !important;
+	font-size:13px;
+	width:300px !important;
+	text-align:center;
+	padding:10px;
+	margin-bottom:10px;}
+
+.pq-select-search-div{
+	border-radius:0 !important;
+	margin:5px 0;
+	}
+
+.pq-select-popup label{
+	border-radius:0 !important;}
+
+.select-filter select {
+    width: 100%;
+    padding: 11px;
+}
+
+.advance-search #submit {
+    background: #1ba0d8;
+    color: #FFF;
+    padding: 6px;
+    border: none;
+    position: relative;
+    left: 0 !important;
+    display: block;
+    float: left;
+    height: 41px;
+    width: 300px;
+}
+
+
+#wrapper-button.filter-map a{
+	display:block;
+	padding:10px;
+	background:#099;
+	color:#FFF;
+	width:100px;
+	float:left;
+	text-align:center;
+	float:right;
+	margin-left:10px;
+	
+	
+	}
+th.red,td.red{
+	background:#F00 !important;
+	color:#FFF;
+	}
+.delete_manifest{
+	cursor:pointer;
+}
+.delete_transport_order{
+	cursor:pointer;
+}
+td.orange{
+	background:#e89a03;
+	color:#000;}
+
+td.hadir{
+	background:#096;
+	text-align:center;
+	}
+td.hadir a{
+	color:#FFF;}
+td.sakit{
+	background:#fb9006;
+	text-align:center;
+	}
+td.sakit a{
+	color:#FFF;}
+td.izin{
+	background:#06F;
+	text-align:center;
+	}
+
+td.izin a{
+	color:#FFF;}
+
+#wrapper-search select {
+    padding: 3.5px;
+    border: solid 1px #CCC;
+    height: 42px;
+	margin-bottom:10px;
+}
+div.mid{
+	width:150px;
+}
+
+div.short{
+	width:50px;
+}
+
+div.long{
+	width:200px;
+}
+
+#myTable04{
+	width:100% !important;}
+
+#myTable03{width:100% !important;}
+
+#zoom_map{
+	width:100%;
+	padding:10px;
+	font-size:16px;
+	text-align:center;
+	background:#19a2f8;
+	color:#FFF;
+	display:block;
+	margin-top:10px;
+	}
+
+.wrapper-form-input{
+	float:left;
+	margin-right:10px;
+	width:200px;
+	}
+
+.wrapper-form-input select{
+	width:200px;
+	height:31px;}
+h3.keterangan{
+	margin-top:10px;}
+.wrapper-form-input .required.error{
+	border:solid 1px #F00 !important;}
+
+.left-chart{
+	float:left;
+	width:50%;
+	margin-top:20px;
+	}
+
+.right-chart{
+	float:left;
+	width:50%;
+	margin-top:20px;
+	}
+
+ #wrapper-search.chart select{
+	width:300px;
+	height:43px;
+	margin-top:5px;}
+#wrapper-search.chart #submit{
+	width:303px;
+	margin-top:5px;}
+
+#wrapper-search.chart #clear-search {
+    width: 300px;
+    margin-top: 5px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 2px;
+}
+#wrapper-search.chart div.pq-select-button{
+	margin-top:5px;
+	}
+
+.highcharts-legend-item{
+	display:block;
+	width:100%;}
+
+#right-welcome {
+    text-align: right;
+    color: #FFF;
+    margin-top: 14px;
+    float: right;
+    margin-right: 20px;
+}
+
+.journey-plan .red a{
+	color:#FFF !important;}
+
+/* The Modal (background) */
+.modal {
+    //display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-top: 10px;
+    font-size: 20px;
+    margin-top: 0;
+    padding: 10px 0;
+    margin-bottom: 0px;
+}
+.add .modal-content h2 {
+	border-bottom: solid 2px #339e04;
+}
+
+.remodal label{
+	float:left;
+	width:100%;
+	text-align:left;
+}
+.remodal label.error{
+	color:#f90;
+	font-size:12px;
+	font-weight:normal;
+}
+.left-form{
+	float:left;
+	width:49%;
+	margin-right:1%;
+	
+}
+.right-form{
+	float:right;
+	width:49%;
+	margin-left:1%;
+}
+
+.box-body.form{
+	padding:0;
+}
+
+.ui-autocomplete{
+	z-index:999999999;
+}
+table.po,table.edit_po{
+	min-width:100%;
+	border:solid 1px #ccc;
+}
+table.po th,table.po td,table.edit_po th,table.edit_po td{
+	border:solid 1px #ccc;
+	padding:10px;
+	font-size:12px;
+	text-align:center;
+}
+
+table.po th,table.edit_po th{
+	background:#ccc;
+}
+
+.box-body.table{
+	padding:0px;
+	overflow:scroll;
+	
+}
+h2.table-title {
+    font-size: 20px;
+    /* border-bottom: solid 1px #ccc; */
+}
+
+.form-group.add_product{
+	float:left;
+	width:250px;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+button.delete{
+	float:left;
+	    padding: 5px 0px;
+	width:50px;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+
+button.edit_delete{
+	float:left;
+	    padding: 5px 0px;
+	width:50px;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+
+
+button.add_data{
+	float:left;
+	    padding: 5px 0px;
+	width:50px;
+	margin-right:10px;
+	margin-bottom:10px;
+	margin-right:10px;
+}
+
+td .long{
+	width:150px;
+}
+
+table.table-truck-absent{
+	width:100%;
+}
+table.table-truck-absent td , table.table-truck-absent th{
+	padding:5px 10px;
+	border:solid 1px #ccc;
+}
+table.table-truck-absent th{
+	background:#ccc;
+	text-align:center;
+	border:solid 1px #ccc;
+}
+
+table.table-truck-absent td{
+	text-align:left;
+	border:solid 1px #ccc;
+}
+
+table.table-truck-absent td .checkbox_check {
+    margin-right: 10px;
+    display: inline-block;
+    margin-top: 0px;
+    top: 3px;
+    position: relative;
+}
+
+table.table-truck-absent td .select_check {
+	width:100%;
+}
+.detail_text{
+	display:block;
+	text-align:left;
+}

@@ -1,0 +1,315 @@
+[19-Apr-2018 00:08:54 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetRoutes in /home/goodevam/public_html/tracker/getroutes.php:10
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(10): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 10
+[19-Apr-2018 00:08:55 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetAllRoutesForMap in /home/goodevam/public_html/tracker/getallroutesformap.php:11
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(11): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 11
+[19-Apr-2018 00:11:29 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetAllRoutesForMap in /home/goodevam/public_html/tracker/getallroutesformap.php:11
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(11): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 11
+[19-Apr-2018 00:11:29 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetRoutes in /home/goodevam/public_html/tracker/getroutes.php:10
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(10): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 10
+[19-Apr-2018 00:11:44 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetRoutes in /home/goodevam/public_html/tracker/getroutes.php:10
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(10): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 10
+[19-Apr-2018 00:11:44 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetAllRoutesForMap in /home/goodevam/public_html/tracker/getallroutesformap.php:11
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(11): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 11
+[19-Apr-2018 00:19:48 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetRoutes in /home/goodevam/public_html/tracker/getroutes.php:10
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(10): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 10
+[19-Apr-2018 00:19:48 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetAllRoutesForMap in /home/goodevam/public_html/tracker/getallroutesformap.php:11
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(11): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 11
+[19-Apr-2018 00:21:02 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetAllRoutesForMap in /home/goodevam/public_html/tracker/getallroutesformap.php:11
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(11): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 11
+[19-Apr-2018 00:21:02 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetRoutes in /home/goodevam/public_html/tracker/getroutes.php:10
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(10): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 10
+[19-Apr-2018 00:21:06 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetAllRoutesForMap in /home/goodevam/public_html/tracker/getallroutesformap.php:11
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(11): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 11
+[19-Apr-2018 00:21:06 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetRoutes in /home/goodevam/public_html/tracker/getroutes.php:10
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(10): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 10
+[19-Apr-2018 00:25:36 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetRoutes in /home/goodevam/public_html/tracker/getroutes.php:10
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(10): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 10
+[19-Apr-2018 00:25:36 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetAllRoutesForMap in /home/goodevam/public_html/tracker/getallroutesformap.php:11
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(11): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 11
+[19-Apr-2018 00:25:41 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetRoutes in /home/goodevam/public_html/tracker/getroutes.php:10
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(10): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 10
+[19-Apr-2018 00:25:41 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetAllRoutesForMap in /home/goodevam/public_html/tracker/getallroutesformap.php:11
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(11): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 11
+[19-Apr-2018 00:26:43 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetRoutes in /home/goodevam/public_html/tracker/getroutes.php:10
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(10): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 10
+[19-Apr-2018 00:26:43 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetAllRoutesForMap in /home/goodevam/public_html/tracker/getallroutesformap.php:11
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(11): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 11
+[19-Apr-2018 00:36:46 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetRoutes in /home/goodevam/public_html/tracker/getroutes.php:10
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(10): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 10
+[19-Apr-2018 00:36:46 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetAllRoutesForMap in /home/goodevam/public_html/tracker/getallroutesformap.php:11
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(11): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 11
+[19-Apr-2018 01:02:44 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetAllRoutesForMap in /home/goodevam/public_html/tracker/getallroutesformap.php:11
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(11): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 11
+[19-Apr-2018 01:02:44 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetRoutes in /home/goodevam/public_html/tracker/getroutes.php:10
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(10): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 10
+[19-Apr-2018 01:05:39 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:05:39 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetRoutes does not exist in /home/goodevam/public_html/tracker/getroutes.php:14
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 14
+[19-Apr-2018 01:06:26 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetRoutes does not exist in /home/goodevam/public_html/tracker/getroutes.php:14
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 14
+[19-Apr-2018 01:06:26 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:06:49 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:06:50 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetRoutes does not exist in /home/goodevam/public_html/tracker/getroutes.php:14
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 14
+[19-Apr-2018 01:07:02 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetRoutes does not exist in /home/goodevam/public_html/tracker/getroutes.php:14
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 14
+[19-Apr-2018 01:07:03 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:08:31 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:08:31 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetRoutes does not exist in /home/goodevam/public_html/tracker/getroutes.php:14
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 14
+[19-Apr-2018 01:08:35 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetRoutes does not exist in /home/goodevam/public_html/tracker/getroutes.php:14
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 14
+[19-Apr-2018 01:08:35 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:13:00 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetRoutes does not exist in /home/goodevam/public_html/tracker/getroutes.php:14
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 14
+[19-Apr-2018 01:13:00 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:13:34 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:13:34 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetRoutes does not exist in /home/goodevam/public_html/tracker/getroutes.php:14
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 14
+[19-Apr-2018 01:13:47 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:13:47 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:13:48 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:15:38 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetRoutes does not exist in /home/goodevam/public_html/tracker/getroutes.php:14
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 14
+[19-Apr-2018 01:15:39 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:15:44 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetRoutes does not exist in /home/goodevam/public_html/tracker/getroutes.php:14
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 14
+[19-Apr-2018 01:15:44 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:15:57 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:15:57 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetRoutes does not exist in /home/goodevam/public_html/tracker/getroutes.php:14
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 14
+[19-Apr-2018 01:15:59 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetRoutes does not exist in /home/goodevam/public_html/tracker/getroutes.php:14
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 14
+[19-Apr-2018 01:16:00 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:17:22 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetRoutes does not exist in /home/goodevam/public_html/tracker/getroutes.php:14
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 14
+[19-Apr-2018 01:17:22 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:17:24 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetRoutes does not exist in /home/goodevam/public_html/tracker/getroutes.php:14
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 14
+[19-Apr-2018 01:17:24 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:40:52 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:40:52 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetRoutes does not exist in /home/goodevam/public_html/tracker/getroutes.php:14
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 14
+[19-Apr-2018 01:41:56 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetRoutes does not exist in /home/goodevam/public_html/tracker/getroutes.php:14
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 14
+[19-Apr-2018 01:41:57 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:43:08 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetRoutes does not exist in /home/goodevam/public_html/tracker/getroutes.php:14
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 14
+[19-Apr-2018 01:43:08 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:46:36 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetRoutes does not exist in /home/goodevam/public_html/tracker/getroutes.php:14
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 14
+[19-Apr-2018 01:46:37 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE goodevam_tracker.prcGetAllRoutesForMap does not exist in /home/goodevam/public_html/tracker/getallroutesformap.php:15
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 15
+[19-Apr-2018 01:50:32 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetRoutes in /home/goodevam/public_html/tracker/getroutes.php:10
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getroutes.php(10): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getroutes.php on line 10
+[19-Apr-2018 01:50:32 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 no such table: v_GetAllRoutesForMap in /home/goodevam/public_html/tracker/getallroutesformap.php:11
+Stack trace:
+#0 /home/goodevam/public_html/tracker/getallroutesformap.php(11): PDO->prepare('select * from v...')
+#1 {main}
+  thrown in /home/goodevam/public_html/tracker/getallroutesformap.php on line 11
