@@ -55,8 +55,8 @@
 					                                        <a id="add-data" class="button blue-button">
                     	<span class="glyphicon glyphicon-plus"></span> Add
                     </a>
-										                    <a id="delete-data" class="button btn-danger deletelogg">
-                    	<span class="glyphicon glyphicon-trash"></span> Delete
+										                    <a id="delete-data" class="button btn-warning">
+                    	<span class="glyphicon glyphicon-download"></span> Import
                     </a>
 										
 					<a href="http://stms.goodevamedia.com/index.php/transport_order/exportTransportOrder?search=" class="button green-button">
@@ -75,82 +75,69 @@
                 </div>
                 </div>
             <div id="wrapper-console" class="clearfix"> 
-            <div class="grid_4 height400">                  
-           	<table id="myTable04" class="fancyDarkTable table table-bordered table-hover">
+            <div class="grid_4 height400" style="width: 100%;">                  
+           	<table id="myTable04" class="fancyDarkTable table table-bordered table-hover" >
                     <thead>
                       <tr>
                         <th>
 						<div class="long">
-						<div class="check-box-div"><input type="checkbox" name="select_all" id="select_all"></div>SPK Number
+						Action
 						</div>
-						</th>
-                        <th>Reference</th>
+			</th>
+                        			<th>Reference</th>
 						<th>DO Number</th>
+						<th>Qty</th>
+						<th>Uom</th>
+						<th>Volume</th>
+						<th>Weight</th>
 						<th>Order Type</th>
-                        <th>Delivery Date</th>
-						<th>Posting Date</th>
-						<th>Origin ID</th>
-						<th>Origin Area</th>
+						<th>Created Date</th>
+                        <th>Req. Pickup Date</th>
+                        <th>Req. Pickup Time</th>
+                        <th>Req. Delivery  Date</th>
+                        <th>Req. Delivery Time</th>
+						<th>Origin Name</th>
 						<th>Origin Address</th>
-						<th>Destination ID</th>
-						<th>Destination Area</th>
+						<th>Origin Area</th>
+						<th>Destination Name</th>
 						<th>Destination Address</th>
+						<th>Destination Area</th>
 						<th>Status</th>
+						<th>Remark</th>
 						
 						<?php if($data_role[0]['delete_transport_order']=='yes' || $data_role[0]['edit_transport_order']=='yes'){ ?>
-						<th>Action</th>
+						
 						<?php } ?>
                       </tr>
                     </thead>
              		<tbody>
                     <?php foreach($data_transport_order as $data_transport_order) {?>
                     <tr id="data_<?php echo $data_transport_order->spk_number; ?>">
-                    	<td class="spk_number">
-						<?php if($data_transport_order->manifest=='0'){ ?>
-						<div class="check-box-div">
-						<!--<input type="checkbox" name="id_checkbox[]" class="iCheck-helper toedit checkbox_satuan" value="<?php echo $data_transport_order->spk_number; ?>" />-->
-						</div>
-						<?php } ?>
-						<span class='spk_number'"><?php echo $data_transport_order->spk_number; ?></span>
-						<span class='remark' style='display:none;'><?php echo $data_transport_order->remark; ?></span>
-						<span class='si' style='display:none;'><?php echo $data_transport_order->si; ?></span>
-						<span class='hawb' style='display:none;'><?php echo $data_transport_order->hawb; ?></span>
-						<span class='mawb' style='display:none;'><?php echo $data_transport_order->mawb; ?></span>
-						<span class='notes' style='display:none;'><?php echo $data_transport_order->notes; ?></span>
-						<span class='manifest' style='display:none;'><?php echo $data_transport_order->manifest; ?></span>
-						<span class='client_id' style='display:none;'><?php echo $data_transport_order->client_id; ?></span>
-						<span class='client_name' style='display:none;'><?php echo $data_transport_order->client_name; ?></span>
-						<span class='document_date' style='display:none;'><?php convert_date($data_transport_order->document_date); ?></span>
-						<span class='document_time' style='display:none;'><?php echo $data_transport_order->document_time; ?></span>
-						<span class='delivery_time' style='display:none;'><?php echo $data_transport_order->delivery_time; ?></span>
-						<span class='posting_date' style='display:none;'><?php convert_date($data_transport_order->posting_date); ?></span>
-						<span class='qty' style='display:none;'><?php echo $data_transport_order->qty; ?></span>
-						<span class='volume' style='display:none;'><?php echo $data_transport_order->volume; ?></span>
-						<span class='weight' style='display:none;'><?php echo $data_transport_order->weight; ?></span>
-						
-						<span class='cargo_type' style='display:none;'><?php echo $data_transport_order->cargo_type; ?></span>
-						<span class='id_detail_trucking_order' style='display:none;'><?php echo $data_transport_order->id_detail_trucking_order; ?></span>
-						<span class='id_trucking_order' style='display:none;'><?php echo $data_transport_order->id_trucking_order; ?></span>
-						</td>
-                        <td class="reference"><?php echo $data_transport_order->reference; ?></td>
+                    	<td>
+						<a  class="delete_data link_action" id="<?php echo $data_transport_order->spk_number; ?>" >Delete</a>
+						 | 
+						<a  id="<?php echo $data_transport_order->spk_number; ?>" class="edit_data link_action">Edit</a>
+						<?php  ?></td>
+                        			<td class="reference"><?php echo $data_transport_order->reference; ?></td>
 						<td class="do_number"><?php echo $data_transport_order->do_number; ?></td>
+						<td class="qty"><?php echo $data_transport_order->qty; ?></td>
+						<td class="uom"><?php echo $data_transport_order->uom; ?></td>
+						<td class="weight"><?php echo $data_transport_order->weight; ?></td>
+						<td class="volume"><?php echo $data_transport_order->volume; ?></td>
 						<td class="order_type"><?php echo $data_transport_order->order_type; ?></td>
-                        <td class="delivery_date"><?php convert_date($data_transport_order->delivery_date); ?></td>
-						<td class="posting_date"><?php convert_date($data_transport_order->posting_date); ?></td>
-						<td class="origin_id"><?php echo $data_transport_order->origin_id; ?></td>
-						<td class="origin_area"><?php echo $data_transport_order->origin_area; ?></td>
+						<td class="created_date"><?php convert_date($data_transport_order->created_date); ?></td>
+                        			<td class="req_pick_up_date"><?php convert_date($data_transport_order->req_pick_up_date); ?></td>
+                        			<td class="req_pick_up_time"><?php echo $data_transport_order->req_pick_up_time; ?></td>
+                        			<td class="req_delivery_date"><?php convert_date($data_transport_order->req_delivery_date); ?></td>
+                        			<td class="req_pick_up_date"><?php echo $data_transport_order->req_delivery_time; ?></td>
+						<td class="origin_name"><?php echo $data_transport_order->origin_name; ?></td>
 						<td class="origin_address"><?php echo $data_transport_order->origin_address; ?></td>
-						<td class="destination_id"><?php echo $data_transport_order->destination_id; ?></td>
+						<td class="origin_area"><?php echo $data_transport_order->origin_area; ?></td>
+						<td class="destination_name"><?php echo $data_transport_order->destination_name; ?></td>
 						<td class="destination_address"><?php echo $data_transport_order->destination_address; ?></td>
 						<td class="destination_area"><?php echo $data_transport_order->destination_area; ?></td>
 						<td class="status"><?php echo $data_transport_order->status; ?></td>
-						<?php if($data_role[0]['delete_transport_order']=='yes' || $data_role[0]['edit_transport_order']=='yes'){ ?>
-						<td><?php if($data_transport_order->manifest=='0'){ ?>
-						<?php if($data_role[0]['delete_transport_order']=='yes'){ ?><a  class="delete_data link_action" id="<?php echo $data_transport_order->spk_number; ?>" >Delete</a>
-						<?php } ?><?php } ?> | <?php if($data_role[0]['edit_transport_order']=='yes'){ ?>
-						<a  id="<?php echo $data_transport_order->spk_number; ?>" class="edit_data link_action">Edit</a>
-						<?php } ?></td>
-						<?php } ?>
+						<td class="remark"><?php echo $data_transport_order->remark; ?></td>
 					</tr>
                     <?php }?>
                     </tbody>       
@@ -178,8 +165,8 @@
 				 
               <div class="box-body">
 
+
 				<div class="left-form clearfix">
-				
 					<div class="form-group">
 					  <label for="drivercode2">Reference</label>
 					 <input type="text" class="form-control" name="reference" id="reference" required>
@@ -189,20 +176,85 @@
 					  <label for="drivercode2">DO Number</label>
 					 <input type="text" class="form-control" name="do_number" id="do_number" required>
 					</div>
-					
+
 					<div class="form-group">
-						  <label for="drivercode2">Delivery Date </label>
-						  <div class="input-group date">
+					 <label>Order Type</label>
+						<div class="input-group">
 						  <div class="input-group-addon">
-							<i class="fa fa-calendar"></i>
+							<i class="fa fa-search"></i>
 						  </div>
-						  <input type="text" name="delivery_date" id="delivery_date" class="form-control pull-right datepicker"   placeholder='Delivery Date' required>
+						  <input type="text" class="form-control pull-right" name="search_order_type" id="search_order_type" value='' placeholder='Search Order Type'>
+						  <input type="text" readonly class="form-control" name="order_type" id="order_type" placeholder='Order Type' required>
+					</div>
+						<!-- /.input group -->
+					</div>
+
+					<div class="form-group">
+						  <label for="drivercode2">Req. Pickup Date </label>
+						  <div class="input-group">
+						  <div class="input-group-addon">
+							<i class="fa fa-calendar open-datetimepicker"></i>
+						  </div>
+						  <input type="text" name="req_pick_up_date" id="req_pick_up_date" class="form-control pull-right datepicker"   placeholder='Delivery Date' required>
 						 </div>
 					</div>
 					
 					<div class="bootstrap-timepicker">
 					<div class="form-group">
-					  <label>Delivery Time</label>
+					  <label>Req. Pickup Time</label>
+
+					  <div class="input-group">
+						<input type="text"  name="req_pick_up_time" id="req_pick_up_time" class="form-control timepicker" placeholder='Delivery Time' required>
+
+						<div class="input-group-addon">
+						  <i class="fa fa-clock-o"></i>
+						</div>
+					  </div>
+					  <!-- /.input group -->
+					</div>
+					<!-- /.form group -->
+				  </div>
+					
+					<div class="form-group">
+						  <label for="drivercode2">Req. Delivery Date </label>
+						  <div class="input-group date">
+						  <div class="input-group-addon">
+							<i class="fa fa-calendar"></i>
+						  </div>
+						  <input type="text" name="req_delivery_date" id="req_delivery_date" class="form-control pull-right datepicker"   placeholder='Delivery Date' required>
+						 </div>
+					</div>
+					
+					<div class="bootstrap-timepicker">
+					<div class="form-group">
+					  <label>Req. Delivery Time</label>
+
+					  <div class="input-group">
+						<input type="text"  name="req_delivery_time" id="req_delivery_time" class="form-control timepicker" placeholder='Delivery Time' required>
+
+						<div class="input-group-addon">
+						  <i class="fa fa-clock-o"></i>
+						</div>
+					  </div>
+					  <!-- /.input group -->
+					</div>
+					<!-- /.form group -->
+				  </div>
+					
+									
+				<div class="form-group">
+						  <label for="drivercode2">DO Created Date </label>
+						  <div class="input-group date">
+						  <div class="input-group-addon">
+							<i class="fa fa-calendar"></i>
+						  </div>
+						  <input type="text" name="posting_date" id="posting_date" class="form-control pull-right datepicker"   placeholder='Posting Date' required>
+						 </div>
+				</div>
+
+				<div class="bootstrap-timepicker">
+					<div class="form-group">
+					  <label>DO Created Time</label>
 
 					  <div class="input-group">
 						<input type="text"  name="delivery_time" id="delivery_time" class="form-control timepicker" placeholder='Delivery Time' required>
@@ -217,6 +269,11 @@
 				  </div>
 					
 					
+				</div>
+				
+				
+				<div class="right-form clearfix">
+						
 					<div class="form-group">
 					 <label>Origin</label>
 						<div class="input-group">
@@ -225,6 +282,7 @@
 						  </div>
 						  <input type="text" class="form-control pull-right" name="search_origin_id" id="search_origin_id" value='' placeholder='Search origin ID'>
 						  <input type="text" readonly class="form-control" name="origin_id" id="origin_id" placeholder='Origin ID' required>
+						  <input type="text" readonly class="form-control" name="origin_name" id="origin_name" placeholder='Origin Name' required>
 						  <input type="text" readonly class="form-control" name="origin_address" id="origin_address" placeholder='Origin Address 1' required>
 						  <input type="text" readonly class="form-control" name="origin_area" id="origin_area" placeholder='Origin Area' required>
 					</div>
@@ -240,18 +298,12 @@
 						  </div>
 						  <input type="text" class="form-control pull-right" name="search_destination" id="search_destination" value='' placeholder='Search Destination'>
 						  <input type="text" readonly class="form-control" name="destination_id" id="destination_id" placeholder='Destination ID' required>
+						  <input type="text" readonly class="form-control" name="destination_name" id="destination_name" placeholder='Destination Name' required>
 						  <input type="text" readonly class="form-control" name="destination_address" id="destination_address" placeholder='Destination Address 1' required>
 						  <input type="text" readonly class="form-control" name="destination_area" id="destination_area" placeholder='Destination Area' required>
 					</div>
 						<!-- /.input group -->
 					</div>
-					
-					
-				</div>
-				
-				
-				<div class="right-form clearfix">
-						
 					<div class="form-group">
 					 <label>Client</label>
 						<div class="input-group">
@@ -264,56 +316,9 @@
 					</div>
 						<!-- /.input group -->
 					</div>
-					
-					
-					<div class="form-group">
-						  <label for="drivercode2">Document Date </label>
-						  <div class="input-group date">
-						  <div class="input-group-addon">
-							<i class="fa fa-calendar"></i>
-						  </div>
-						  <input type="text" name="document_date" id="document_date" class="form-control pull-right datepicker"   placeholder='Document Date' required>
-						 </div>
-					</div>
-					
-					<div class="bootstrap-timepicker">
-					<div class="form-group">
-					  <label>Document Time</label>
-
-					  <div class="input-group">
-						<input type="text"  name="document_time" id="document_time" class="form-control timepicker" placeholder='Document Time' required>
-
-						<div class="input-group-addon">
-						  <i class="fa fa-clock-o"></i>
-						</div>
-					  </div>
-					  <!-- /.input group -->
-					</div>
-					<!-- /.form group -->
-				  </div>
-				
-				 <div class="form-group">
-						  <label for="drivercode2">Posting Date </label>
-						  <div class="input-group date">
-						  <div class="input-group-addon">
-							<i class="fa fa-calendar"></i>
-						  </div>
-						  <input type="text" name="posting_date" id="posting_date" class="form-control pull-right datepicker"   placeholder='Posting Date' required>
-						 </div>
-				</div>
 				
 				
-				<div class="form-group">
-					 <label>Order Type</label>
-						<div class="input-group">
-						  <div class="input-group-addon">
-							<i class="fa fa-search"></i>
-						  </div>
-						  <input type="text" class="form-control pull-right" name="search_order_type" id="search_order_type" value='' placeholder='Search Order Type'>
-						  <input type="text" readonly class="form-control" name="order_type" id="order_type" placeholder='Order Type' required>
-					</div>
-						<!-- /.input group -->
-					</div>
+				
 					
 					
 					<div class="form-group">
@@ -344,7 +349,10 @@
 						  <label for="transport_ordercode">Qty</label>
 						  <input type="text" class="form-control" name="qty" id="qty">
 						</div>
-						
+						<div class="form-group">
+						  <label for="transport_ordercode">Uom</label>
+						  <input type="text" class="form-control" name="uom" id="uom">
+						</div>
 						<div class="form-group">
 						  <label for="transport_ordercode">Volume</label>
 						  <input type="text" class="form-control" name="volume" id="volume">
@@ -432,6 +440,7 @@
 					  <label for="drivercode2">DO Number</label>
 					 <input type="text" class="form-control" name="edit_do_number" id="edit_do_number" required>
 					</div>
+
 					
 					<div class="form-group">
 						  <label for="drivercode2">Delivery Date </label>
@@ -756,7 +765,7 @@
 	  <br>
 	  
 	</div>
-		
+
   <script>
   
 			$('.datepicker').datepicker({
@@ -766,9 +775,10 @@
 			
 			
 			  //Timepicker
-				 $(".timepicker").timepicker({
+			$(".timepicker").timepicker({
 			  showInputs: false
 			});
+
 			
 			$(".delete_data").click(function(){
 				var id = $(this).attr('id');
@@ -869,7 +879,7 @@
 				$("#edit_cargo_type").val(cargo_type);
 				
 				
-				
+			
 				
 			});
 
@@ -1120,6 +1130,7 @@ $(".edit_data").click(function(){
          minLength:0,
 		 select: function( event , ui ) {
 			  $( "#origin_id" ).val( ui.item.customer_id );
+			  $( "#origin_name" ).val( ui.item.customer_name );
 			  $( "#origin_address" ).val( ui.item.customer_address_1 );
 			  $( "#origin_area" ).val( ui.item.area );
 			 
@@ -1168,6 +1179,7 @@ $(".edit_data").click(function(){
          minLength:0,
 		 select: function( event , ui ) {
 			  $( "#destination_id" ).val( ui.item.customer_id );
+			  $( "#destination_name" ).val( ui.item.customer_name );
 			  $( "#destination_address" ).val( ui.item.customer_address_1 );
 			  $( "#destination_area" ).val( ui.item.area );
 			 
@@ -1201,6 +1213,8 @@ $(".edit_data").click(function(){
 		
 	
   </script>
+
+
 
   
   

@@ -47,7 +47,7 @@ class Home extends CI_Controller {
 	
 	public function index()
 	{
-
+		
 			date_default_timezone_set('Asia/Jakarta');
 			if ($this->tank_auth->is_logged_in()) {
 			$user	= $this->tank_auth->get_username();

@@ -15,7 +15,7 @@
    <section class="content">
 		
 		  <div class="box sms box-default color-palette-box">
-            <div class="box-header with-border">
+            <div class="box-header with-border">C
               <h3 class="box-title"><i class="fa fa-table"></i> Route Planning</h3>
             </div>
             <div class="box-body">
@@ -32,21 +32,38 @@
                      <div class="alert alert-danger"><?php echo $message_failed; ?></div>
                      <?php } ?>
 					 
-			<div id='wrapper-control-search' class='clearfix'>
+			<div id="wrapper-button-full" style="margin-top:10px; margin-bottom:10px;" class="clearfix">
+					
+					<a id="add-data-vehicle" class="button green-button">
+                    	Add Vehicle
+                    </a><a id="edit_vehicle_manifest" class="button green-button">
+                    	Edit Manifest
+                    </a><a href="#" class="button orange-button">
+                    	Export
+                    </a><div id="wrapper-control-search" class="clearfix" style="
+    float: right;
+">
+<div class="">
+					 <label></label>
+						<div class="input-group">
+						  <input type="hidden" class="form-control pull-right" name="search_client_id" id="search_client_id" value='' placeholder='Search Client ID'>
+						</div>
+						<!-- /.input group -->
+				</div>
 					<div class="form-group search_manifest">
 					  <label for="drivercode2">Delivery Date</label>
 						  <div class="input-group date">
 						  <div class="input-group-addon">
 							<i class="fa fa-calendar click-datepicker"></i>
 						  </div>
-						  <input type="text" name="delivery_date" id="delivery_date" class="form-control pull-right datepicker"  required>
+						  <input type="text" name="delivery_date" id="delivery_date" class="form-control pull-right datepicker" required="">
 						
 						</div>
 				</div>
 				
 				 <div class="form-group search_manifest">
 					  <label for="drivercode2">Trip</label>
-					  <select class="form-control" name="trip" id="trip" required>
+					  <select class="form-control" name="trip" id="trip" required="">
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -71,51 +88,19 @@
 					</div>
 				
 				
-				<div class="form-group search_manifest">
-					 <label>Client ID</label>
-						<div class="input-group">
-						  <div class="input-group-addon">
-							<i class="fa fa-search"></i>
-						  </div>
-						  <input type="text" class="form-control pull-right" name="search_client_id" id="search_client_id" value=''n placeholder='Search Client ID'>
-						</div>
-						<!-- /.input group -->
-				</div>
 				
-				<input type='button' class='button blue-button search_button_manifest' value='Search Manifest' id='search_manifest_button'>
+				<input type="button" class="button blue-button search_button_manifest" value="Search Manifest" id="search_manifest_button">
 				
 			</div>
-            <div id="wrapper-console" class="clearfix">
-               
-				
-			
-				
-				
-				
-					
-                <div id="wrapper-button-full" style='margin-top:10px; margin-bottom:10px;' class="clearfix">
-					
-					<a href="#" class="button orange-button">
-                    	Export Route Planning
-                    </a>
-					<a id="confirmed_additional_cost" class="button green-button">
-                    	Confirm Additional Cost
-                    </a>
-					<a id="confirmed_manifest" class="button green-button">
-                    	Confirm Manifest
-                    </a>
-					
-					<a id="edit_vehicle_manifest" class="button green-button">
-                    	Confirm Vehicle
-                    </a>
-					<a id="add-data-vehicle" class="button green-button">
-                    	add Manifest
-                    </a>
 					
 					
 					
-                </div>
-                </div>
+					
+					
+					
+					
+					
+                </div>                </div>
             <div id="wrapper-console" class="clearfix"> 
            
             <div id="guest-list"> 
@@ -288,7 +273,7 @@
 	   <div class="remodal" data-remodal-id="modal_edit_vehicle" role="dialog" aria-labelledby="modal1Titl aria-describedby="modal1Desc">
 	  <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
 	  <div>
-		<h2 id="modal1Title">Edit Vehicle ID</h2>
+		<h2 id="modal1Title">Edit Manifest</h2>
 				
 				<form role="form" id="form_edit_vehicle" method="POST" action="<?php echo base_url()."index.php/route_planning/confirmedVehicle" ?>" enctype="multipart/form-data">
 				<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash();?>" />
@@ -300,19 +285,17 @@
 				<input type='hidden' name='client_id_confirmed_vehicle' id='client_id_confirmed_vehicle'>
 				<div class="left-form clearfix">
 				
-					<div class="form-group">
+					<div class="hidden">
 					  <label for="drivercode2">Choose Transporter</label>
 					  <select class="form-control" name="transporter" id="transporter" required>
 						<option value="assets">Assets</option>
-						<option value="vendor">Vendor</option>
 					  </select> 
 					</div>
 					
-					<div class="form-group">
+					<div class="hidden">
 					  <label for="drivercode2">Choose Transporter</label>
 					  <select class="form-control" name="vehicle_status" id="vehicle_status" required>
 						<option value="oncall">On call</option>
-						<option value="contract">Contract</option>
 					  </select> 
 					</div>
 					
@@ -349,7 +332,7 @@
 				
 					
 					<div class="form-group form-assets">
-					 <label>Driver Belawan Indah</label>
+					 <label>Driver</label>
 						<div class="input-group">
 						  <div class="input-group-addon">
 							<i class="fa fa-search"></i>
@@ -359,12 +342,6 @@
 						  <input type="text" readonly class="form-control" name="driver_code_assets" id="driver_code_assets" placeholder='Driver Code' required>
 					</div>
 						<!-- /.input group -->
-					</div>
-					
-					<div class="form-group form-vendor" >
-					  <label for="drivercode2">Driver Vendor</label>
-					 <input type="text"  class="form-control" name="driver_vendor" id="driver_vendor" placeholder='Driver Name'>
-					 <input type="text"  class="form-control" name="driver_vendor_phone_number" id="driver_vendor_phone_number"  placeholder='Driver Phone Number'>
 					</div>
 					
 					
@@ -404,14 +381,6 @@
 					</div>
 						<!-- /.input group -->
 				</div>
-				
-				
-
-				<div class="form-group form-vendor">
-					  <label for="drivercode2 ">Vehicle ID</label>
-					  <input type="text"  class="form-control" name="vehicle_id_vendor" id="vehicle_id_vendor"  placeholder='Vehicle ID'>
-					</div>
-				
 				
 				
 				<div class="form-group form-vendor">

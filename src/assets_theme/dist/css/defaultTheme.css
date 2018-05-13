@@ -60,6 +60,8 @@
 	
 	/* position */
 	position: relative;
+	width: 100% !important;
+
 	}
 
 	.fht-table-wrapper .fht-fixed-body .fht-tbody,
@@ -82,11 +84,16 @@
 	    top: 0;
 	    left: 0;
 	    position: absolute;
+
 	    }
 	    
 	.fht-table-wrapper .fht-fixed-column {
 	    /* position */
 	    z-index: 1;
 	    }
+
+div.fht-fixed-body{
+	width: 100% !important;
+}
 
 /* @end */

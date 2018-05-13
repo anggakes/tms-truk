@@ -89,11 +89,16 @@
 					 <tr id="data_<?php echo $data_traffic_monitoring->id_manifest; ?>" >
 							<td colspan='10' style='background:#ccc;'>
 								<?php 
-								
 								$data_transport_order = $this->db->query("SELECT order_type FROM transport_order where manifest = '".$data_traffic_monitoring->id_manifest."' ORDER BY spk_number ")->result_array();
 								$delivery_date = explode('-',$data_traffic_monitoring->delivery_date);
 								$delivery_date = $delivery_date[2].'-'.$delivery_date[1].'-'.$delivery_date[0];
-								echo "ID Manifest - ".$data_traffic_monitoring->id_manifest." - ".$delivery_date." - ".$data_traffic_monitoring->vehicle_id." - ".$data_traffic_monitoring->vehicle_type.' ('.$data_transport_order[0]['order_type'].')'; ?>
+								if(isset($data_transport_order[0])){
+									echo "ID Manifest - ".$data_traffic_monitoring->id_manifest." - ".$delivery_date." - ".$data_traffic_monitoring->vehicle_id." - ".$data_traffic_monitoring->vehicle_type.' ('.$data_transport_order[0]['order_type'].')'; 
+								}
+								else{
+									echo "ID Manifest - ".$data_traffic_monitoring->id_manifest." - ".$delivery_date." - ".$data_traffic_monitoring->vehicle_id." - ".$data_traffic_monitoring->vehicle_type.' (-)'; 
+								}
+								?>
 							</td>
 					 </tr>
 					 

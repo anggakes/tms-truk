@@ -44,7 +44,9 @@
 
  </style>
  
-  <body>
+  <body style="
+    height: 660px;
+">
 
 
 
@@ -53,7 +55,14 @@
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
 
-	  <div id="login-page">
+	  <div id="login-page" style="
+    
+    background-image: url('http://stms.goodevamedia.com/assets/login-form/images/login.png');        /* Full height */
+    height: 100%;         /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+">
 	  <div class="container">
         
        
@@ -99,7 +108,7 @@ $remember = array(
 
 				<form class="form-login" action="<?php echo SITE_URL(); ?>/auth/login" method="post">
                 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash();?>" />
-		        <h2 class="form-login-heading">WELCOME TO Fipass</h2>
+		        <h2 class="form-login-heading">TMSUKSEMA LOGIN</h2>
 		        <div class="login-wrap">
                     <?php echo form_input($login); ?>
                 	

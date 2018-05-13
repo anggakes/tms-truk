@@ -2011,9 +2011,9 @@ label {
 
 /*LOGIN CONFIGURATION PAGE*/
 .form-login {
-	max-width: 330px;
+	max-width: 340px;
 	margin: 100px auto 0;
-	background: #fff;
+	background: rgba(209, 208, 208, 0.79);
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 }

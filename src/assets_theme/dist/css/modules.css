@@ -134,8 +134,8 @@ table#invoice-table th,table#invoice-table td{
 
 .search_manifest{
 	float:left;
-	width:200px;
-	margin-right:10px;
+	width:160px;
+	margin-right:1px;
 }
 ul.accounting li{
 	
@@ -439,7 +439,7 @@ table#example2 th{
 	display:block;
 	padding:7px;
 	color:#FFF;
-	float:right;
+	float:left;
 	
 	margin-left:5px;
 	}
@@ -453,7 +453,7 @@ table#example2 th{
 	}
 	
 .green-button{
-	background:#1db6bd;
+	background:#1dbd28;
 	}
 
 .blue-button{
