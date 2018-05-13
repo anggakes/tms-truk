@@ -13,7 +13,7 @@ class Order extends CI_Controller {
         $this->load->model('model_driver_login_token');
         $this->load->library('apilib');
         $this->load->model('model_manifest');
-        $this->load->model('model_transport_order');
+        $this->load->model('model_transport_order_api');
 
 
     }
@@ -240,7 +240,7 @@ class Order extends CI_Controller {
 
         $driver = $this->apilib->getDriver($userId);
 
-        $res = $this->model_transport_order->allByDriverNotFinished($driver->driver_code);
+        $res = $this->model_transport_order_api->allByDriverNotFinished($driver->driver_code);
 
         return $this->apilib->response($this, $res, 200);
 
@@ -253,7 +253,7 @@ class Order extends CI_Controller {
 
         if($userId === false) return $this->apilib->responseUnauthorized($this);
 
-        $res = $this->model_transport_order->detail($spkNumber);
+        $res = $this->model_transport_order_api->detail($spkNumber);
 
         if(!$res) return $this->apilib->responseNotFound($this);
 
@@ -271,17 +271,17 @@ class Order extends CI_Controller {
         if($userId === false) return $this->apilib->responseUnauthorized($this);
 
         // check exist
-        $res = $this->model_transport_order->detail($spkNumber);
+        $res = $this->model_transport_order_api->detail($spkNumber);
 
         if(!$res) return $this->apilib->responseNotFound($this);
 
-        $this->model_transport_order->updateTrafficMonitoring($spkNumber, [
+        $this->model_transport_order_api->updateTrafficMonitoring($spkNumber, [
             'arrival_destination_date' => date('Y-m-d'),
             'arrival_destination_time' => date('H:i:s'),
             'status' => $status
         ]);
 
-        $res = $this->model_transport_order->detail($spkNumber);
+        $res = $this->model_transport_order_api->detail($spkNumber);
 
         return $this->apilib->response($this, $res, 200);
 
@@ -297,17 +297,17 @@ class Order extends CI_Controller {
         if($userId === false) return $this->apilib->responseUnauthorized($this);
 
         // check exist
-        $res = $this->model_transport_order->detail($spkNumber);
+        $res = $this->model_transport_order_api->detail($spkNumber);
 
         if(!$res) return $this->apilib->responseNotFound($this);
 
-        $this->model_transport_order->updateTrafficMonitoring($spkNumber, [
+        $this->model_transport_order_api->updateTrafficMonitoring($spkNumber, [
             'start_unloading_date' => date('Y-m-d'),
             'start_unloading_time' => date('H:i:s'),
             'status' => $status
         ]);
 
-        $res = $this->model_transport_order->detail($spkNumber);
+        $res = $this->model_transport_order_api->detail($spkNumber);
 
         return $this->apilib->response($this, $res, 200);
 
@@ -326,17 +326,17 @@ class Order extends CI_Controller {
         if($userId === false) return $this->apilib->responseUnauthorized($this);
 
         // check exist
-        $res = $this->model_transport_order->detail($spkNumber);
+        $res = $this->model_transport_order_api->detail($spkNumber);
 
         if(!$res) return $this->apilib->responseNotFound($this);
 
-        $this->model_transport_order->updateTrafficMonitoring($spkNumber, [
+        $this->model_transport_order_api->updateTrafficMonitoring($spkNumber, [
             'finish_unloading_date' => date('Y-m-d'),
             'finish_unloading_time' => date('H:i:s'),
             'status' => $status
         ]);
 
-        $this->model_transport_order->updateDO($spkNumber, [
+        $this->model_transport_order_api->updateDO($spkNumber, [
             'actual_qty' => $actualQty
         ]);
 
@@ -404,7 +404,7 @@ class Order extends CI_Controller {
 
 
 
-        $res = $this->model_transport_order->detail($spkNumber);
+        $res = $this->model_transport_order_api->detail($spkNumber);
 
         return $this->apilib->response($this, $res, 200);
 
@@ -427,12 +427,12 @@ class Order extends CI_Controller {
 
         // update cancel DO
 
-        $res = $this->model_transport_order->detail($spkNumber);
+        $res = $this->model_transport_order_api->detail($spkNumber);
 
         if(!$res) return $this->apilib->responseNotFound($this);
 
 
-        $this->model_transport_order->updateTrafficMonitoring($spkNumber, [
+        $this->model_transport_order_api->updateTrafficMonitoring($spkNumber, [
             'status' => $status
         ]);
 
@@ -447,7 +447,7 @@ class Order extends CI_Controller {
             ]);
         }
 
-        $res = $this->model_transport_order->detail($spkNumber);
+        $res = $this->model_transport_order_api->detail($spkNumber);
 
 
 
@@ -466,7 +466,7 @@ class Order extends CI_Controller {
 
         $driver = $this->apilib->getDriver($userId);
 
-        $res = $this->model_transport_order->allByDriverFinished($driver->driver_code);
+        $res = $this->model_transport_order_api->allByDriverFinished($driver->driver_code);
 
         return $this->apilib->response($this, $res, 200);
 
