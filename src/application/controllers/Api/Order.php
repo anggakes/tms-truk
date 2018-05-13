@@ -51,6 +51,9 @@ class Order extends CI_Controller {
 
     public function arrivalOrigin(){
 
+        if(!isset($_POST['manifest_id']))
+            return $this->apilib->response($this, ['message' => 'manifest id not set', 'code' => 0], 400);
+
         $manifestId = $_POST['manifest_id'];
         $status = 'tiba lokasi muat';
 
@@ -79,6 +82,9 @@ class Order extends CI_Controller {
     }
 
     public function startLoading(){
+
+        if(!isset($_POST['manifest_id']))
+            return $this->apilib->response($this, ['message' => 'manifest id not set', 'code' => 0], 400);
 
         $manifestId = $_POST['manifest_id'];
         $status = 'mulai muat';
@@ -111,6 +117,12 @@ class Order extends CI_Controller {
 
         $this->load->model('model_transport_order_photo');
 
+        if(!isset($_POST['manifest_id']))
+            return $this->apilib->response($this, ['message' => 'manifest_id not set', 'code' => 0], 400);
+
+        if(!isset($_POST['actual_qty']))
+            return $this->apilib->response($this, ['message' => 'actual_qty not set', 'code' => 0], 400);
+
         $manifestId = $_POST['manifest_id'];
         $status = 'selesai muat';
         $actualQty = $_POST['actual_qty'];
@@ -123,6 +135,12 @@ class Order extends CI_Controller {
         $res = $this->model_manifest->detail($manifestId);
 
         if(!$res) return $this->apilib->responseNotFound($this);
+
+        if(!isset($_FILES['photo_1'])) return $this->apilib->response($this, array(
+            'message' => 'Photo harus diisi',
+            'code' => 0
+        ), 400);
+
 
         $this->model_manifest->updateTrafficMonitoring($manifestId, [
             'finish_loading_date' => date('Y-m-d'),
@@ -147,13 +165,6 @@ class Order extends CI_Controller {
         );
 
         $this->load->library('upload', $config);
-
-        $uploadRes = [];
-
-        if(!isset($_FILES['photo_1'])) return $this->apilib->response($this, array(
-            'message' => 'Photo harus diisi',
-            'code' => 0
-        ), 400);
 
         if(isset($_FILES['photo_1'])){
             if(!$this->upload->do_upload('photo_1'))
@@ -199,6 +210,12 @@ class Order extends CI_Controller {
 
         $type = 'loading';
         $status = 'tidak terkirim';
+
+        if(!isset($_POST['manifest_id']))
+            return $this->apilib->response($this, ['message' => 'manifest_id not set', 'code' => 0], 400);
+        if(!isset($_POST['reason']))
+            return $this->apilib->response($this, ['message' => 'reason not set', 'code' => 0], 400);
+
         $manifestId = $_POST['manifest_id'];
         $reason  = $_POST['reason'];
 
@@ -263,6 +280,9 @@ class Order extends CI_Controller {
 
     public function arrivalDestination(){
 
+        if(!isset($_POST['spk_number']))
+            return $this->apilib->response($this, ['message' => 'spk_number not set', 'code' => 0], 400);
+
         $spkNumber = $_POST['spk_number'];
         $status = 'tiba lokasi bongkar';
 
@@ -288,6 +308,9 @@ class Order extends CI_Controller {
     }
 
     public function startUnLoading(){
+
+        if(!isset($_POST['spk_number']))
+            return $this->apilib->response($this, ['message' => 'spk_number not set', 'code' => 0], 400);
 
         $spkNumber = $_POST['spk_number'];
         $status = 'mulai bongkar';
@@ -317,6 +340,11 @@ class Order extends CI_Controller {
 
         $this->load->model('model_transport_order_photo');
 
+        if(!isset($_POST['spk_number']))
+            return $this->apilib->response($this, ['message' => 'spk_number not set', 'code' => 0], 400);
+        if(!isset($_POST['actual_qty']))
+            return $this->apilib->response($this, ['message' => 'actual_qty not set', 'code' => 0], 400);
+
         $spkNumber = $_POST['spk_number'];
         $status = 'terkirim';
         $actualQty = $_POST['actual_qty'];
@@ -329,6 +357,11 @@ class Order extends CI_Controller {
         $res = $this->model_transport_order_api->detail($spkNumber);
 
         if(!$res) return $this->apilib->responseNotFound($this);
+
+        if(!isset($_FILES['photo_1'])) return $this->apilib->response($this, array(
+            'message' => 'Photo harus diisi',
+            'code' => 0
+        ), 400);
 
         $this->model_transport_order_api->updateTrafficMonitoring($spkNumber, [
             'finish_unloading_date' => date('Y-m-d'),
@@ -363,11 +396,6 @@ class Order extends CI_Controller {
         $this->load->library('upload', $config);
 
         $uploadRes = [];
-
-        if(!isset($_FILES['photo_1'])) return $this->apilib->response($this, array(
-            'message' => 'Photo harus diisi',
-            'code' => 0
-        ), 400);
 
         if(isset($_FILES['photo_1'])){
             if(!$this->upload->do_upload('photo_1'))
@@ -415,6 +443,11 @@ class Order extends CI_Controller {
 
         $this->load->model('model_transport_order_cancel_reason');
 
+        if(!isset($_POST['spk_number']))
+            return $this->apilib->response($this, ['message' => 'spk_number not set', 'code' => 0], 400);
+        if(!isset($_POST['reason']))
+            return $this->apilib->response($this, ['message' => 'reason not set', 'code' => 0], 400);
+
         $type = 'unloading';
         $status = 'tidak terkirim';
         $spkNumber = $_POST['spk_number'];
@@ -436,7 +469,7 @@ class Order extends CI_Controller {
             'status' => $status
         ]);
 
-        $this->model_transport_order_cancel_reason->insert($spkNumber, 'unloading', $reason);
+        $this->model_transport_order_cancel_reason->insert($spkNumber, $type, $reason);
 
         // update manifest
         $notFinished = $this->model_manifest->getDOnotFinished($res->manifest);
