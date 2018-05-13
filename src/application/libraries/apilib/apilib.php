@@ -31,6 +31,14 @@ class ApiLib
         ], 401);
     }
 
+    public function responseNotFound($controller){
+
+        return $this->response($controller,[
+            'message' => 'not found',
+            'code'    => 90003
+        ], 404);
+    }
+
     public function responseInternalError($controller){
 
         return $this->response($controller,[
@@ -66,6 +74,14 @@ class ApiLib
 
         return $userId;
 
+    }
+
+    public function getDriver($driverId){
+
+        $driver = $this->CI->model_driver->getDriver('WHERE id_driver = "'.$driverId.'" ')->result();
+        if(!isset($driver[0])) return false;
+
+        return $driver[0];
     }
 
 }

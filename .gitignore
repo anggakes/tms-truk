@@ -1,1 +1,8 @@
+/db/*
 /db
+
+db/goodevam_stms/user_role.ibd
+
+*.ibd
+
+*.frm

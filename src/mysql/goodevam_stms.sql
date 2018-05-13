@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 05 Bulan Mei 2018 pada 13.14
+-- Waktu pembuatan: 13 Bulan Mei 2018 pada 00.18
 -- Versi server: 5.6.36-82.1-log
--- Versi PHP: 7.1.16
+-- Versi PHP: 7.1.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -583,7 +583,7 @@ CREATE TABLE `driver` (
 --
 
 INSERT INTO `driver` (`id_driver`, `driver_code`, `driver_name`, `driver_license_type`, `employee_status`, `driver_license_number`, `password`, `urutan_driver`) VALUES
-(12, 'AHD', 'AHMAD', 'SIM A', 'employee', '870713250193', '4689c75fd0935ff5818d62fd2083ed98', '');
+(12, '089899911100', 'AHMAD', 'SIM A', 'employee', '870713250193', '25d55ad283aa400af464c76d713c07ad', '');
 
 -- --------------------------------------------------------
 
@@ -616,6 +616,35 @@ CREATE TABLE `driver_absence` (
 INSERT INTO `driver_absence` (`id_absence`, `status_absence`, `driver_code`, `distributor_code`, `id_driver`, `driver_name`, `date_absence`, `keterangan`, `image_absence`, `latitude`, `longitude`, `keterangan_gps`, `setoran`, `konfirmasi_kasir`, `tanggal_konfirmasi_kasir`) VALUES
 (11, 'hadir', 'AHD', '', 12, 'AHMAD', '2018-03-07 23:55:24', '', 'foto_absen_AHD_1520488524.jpeg', '-6.2275081', '107.0045346', '', 0, '', '0000-00-00 00:00:00'),
 (12, 'hadir', 'AHD', '', 12, 'AHMAD', '2018-03-13 23:55:24', '', 'foto_absen_AHD_1520488524.jpeg', '-6.2275081', '107.0045346', '', 0, '', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `driver_login_token`
+--
+
+CREATE TABLE `driver_login_token` (
+  `id` int(11) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `driver_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `driver_login_token`
+--
+
+INSERT INTO `driver_login_token` (`id`, `token`, `timestamp`, `driver_id`) VALUES
+(4, '279838fe05d01c878f40af5a4274a60d', '2018-05-06 12:28:11', 12),
+(5, '20cef24b7302a24b5c88fa6951af3bc2', '2018-05-06 13:38:05', 12),
+(6, '689fb567f4654aff5891e11c448a5505', '2018-05-06 13:38:16', 12),
+(7, '9183466eba55bbde6c89f67d2946a640', '2018-05-06 13:38:40', 12),
+(8, '10b44e14010cf3da6f72f287d6191f59', '2018-05-06 13:39:29', 12),
+(9, 'cb1b2d9ab83195fd240e721d5c068910', '2018-05-06 22:33:45', 12),
+(10, '3ac39cf53043e51d94be5e4099d2d9bd', '2018-05-06 22:42:29', 12),
+(19, '5eb3097d951158bb117215de9966c904', '2018-05-08 03:46:30', 12),
+(20, 'e96c2b393e1f4810155a4426adc28aa7', '2018-05-10 17:13:17', 12),
+(21, 'e431bcb3704b0363418a47d483a6cb94', '2018-05-12 11:43:43', 12);
 
 -- --------------------------------------------------------
 
@@ -798,13 +827,6 @@ CREATE TABLE `login_attempts` (
   `login` varchar(50) COLLATE utf8_bin NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Dumping data untuk tabel `login_attempts`
---
-
-INSERT INTO `login_attempts` (`id`, `ip_address`, `login`, `time`) VALUES
-(1, '36.84.71.48', 'asdas', '2018-05-05 17:51:52');
 
 -- --------------------------------------------------------
 
@@ -1166,7 +1188,12 @@ INSERT INTO `master_manifest` (`id_manifest`, `id_trucking_order`, `driver_code`
 (4, 0, '', '', '', '', '', '', 'TNI', 'PT Trouw Nutrition Indonesia', '', '', '', 'B 1073 IW', '', '', 'CDD BOX', 0, 1, '2018-05-01', '', '', '', '', '', '', '', '', '', 0, 0, 0, '', 'admin', '2018-05-01 08:12:04', '', '0000-00-00 00:00:00', '', '', ''),
 (5, 0, '', '', '', '', '', '', 'TNI', 'PT Trouw Nutrition Indonesia', '', '', '', 'B 9112 OF', '', '', 'TRAILER 20', 0, 1, '2018-05-03', '', '', '', '', '', '', '', '', '', 0, 0, 0, '', 'admin', '2018-05-03 08:36:58', '', '0000-00-00 00:00:00', '', '', ''),
 (7, 0, '', '', '', '', '', '', 'TNI', 'PT Trouw Nutrition Indonesia', '', '', '', 'Dummy 01', '', '', 'TRAILER 20', 0, 1, '2018-05-03', '', '', '', '', '', '', '', '', '', 0, 0, 0, '', 'admin', '2018-05-03 10:57:24', '', '0000-00-00 00:00:00', '', '', ''),
-(8, 0, '', '', '', '', '', '', 'TNI', 'PT Trouw Nutrition Indonesia', '', '', '', 'Dummy 01', '', '', 'TRAILER 20', 0, 2, '2018-05-03', '', '', '', '', '', '', '', '', '', 0, 0, 0, '', 'admin', '2018-05-03 11:04:43', '', '0000-00-00 00:00:00', '', '', '');
+(8, 0, '', '', '', '', '', '', 'TNI', 'PT Trouw Nutrition Indonesia', '', '', '', 'Dummy 01', '', '', 'TRAILER 20', 0, 2, '2018-05-03', '', '', '', '', '', '', '', '', '', 0, 0, 0, '', 'admin', '2018-05-03 11:04:43', '', '0000-00-00 00:00:00', '', '', ''),
+(9, 0, '', '', '', '', '', '', '', '', '', '', '', 'Dummy 01', '', '', 'TRAILER 20', 0, 1, '2018-05-06', '', '', '', '', '', '', '', '', '', 0, 0, 0, '', 'admin', '2018-05-06 04:42:21', '', '0000-00-00 00:00:00', '', '', ''),
+(10, 0, '', '', '', 'assets', '', '', 'SFT', 'SOFTEX INDONESIA', '', '', '', 'B 9112 OF', 'oncall', '', 'TRAILER 20', 10, 1, '2018-05-07', 'JAKARTA', 'Jakarta', 'Jakarat', 'MEDAN', 'Jakarta', 'Jakarta', '', 'yes', '', 0, 0, 0, '', 'admin', '2018-05-07 02:33:37', 'admin', '2018-05-07 01:33:37', 'land', '', ''),
+(11, 0, '089899911100', 'AHMAD', '', 'assets', '', '', 'TNI', 'PT Trouw Nutrition Indonesia', '', '', '', 'B 9112 OF', 'oncall', '', 'TRAILER 20', 10, 1, '2018-05-10', 'MEDAN', 'PT Goodeva', 'bekasi', 'BINJAI', 'PT SUKSEMA', 'BINJAI', '', 'yes', '', 0, 0, 0, '', 'admin', '2018-05-10 06:12:07', 'admin', '2018-05-10 05:12:07', 'land', '', ''),
+(12, 0, '089899911100', 'AHMAD', '', 'assets', '', '', 'TNI', 'PT Trouw Nutrition Indonesia', '', '', '', 'B 9112 OF', 'oncall', '', 'TRAILER 20', 10, 1, '2018-05-12', 'DEMAK', 'Origin Address', 'Origin Area', 'PASURUAN', 'Destination Address', 'Destination Area', '', 'yes', '', 0, 0, 0, '', 'admin', '2018-05-12 12:19:25', 'admin', '2018-05-12 11:19:25', 'land', '', ''),
+(13, 0, '', '', '', '', '', '', '', '', '', '', '', 'Dummy 03', '', '', 'CDD BOX', 0, 1, '2018-05-12', '', '', '', '', '', '', '', '', '', 0, 0, 0, '', 'admin', '2018-05-12 09:42:17', '', '0000-00-00 00:00:00', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -1408,11 +1435,7 @@ CREATE TABLE `order_type` (
 --
 
 INSERT INTO `order_type` (`id_order_type`, `description`) VALUES
-(1, 'Langsir'),
-(2, 'Import'),
-(3, 'Export'),
-(4, 'Regular'),
-(5, 'Langsir_Empty_Cont');
+(4, 'Regular');
 
 -- --------------------------------------------------------
 
@@ -1902,6 +1925,46 @@ CREATE TABLE `test_integer` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `traffic_monitoring`
+--
+
+CREATE TABLE `traffic_monitoring` (
+  `id_traffic_monitoring` int(11) NOT NULL,
+  `id_manifest` int(11) NOT NULL,
+  `spk_number` int(11) NOT NULL,
+  `status` varchar(100) NOT NULL,
+  `client_name` varchar(100) NOT NULL,
+  `client_address` varchar(100) NOT NULL,
+  `arrival_origin_date` date NOT NULL,
+  `arrival_origin_time` time NOT NULL,
+  `start_loading_date` date NOT NULL,
+  `start_loading_time` time NOT NULL,
+  `finish_loading_date` date NOT NULL,
+  `finish_loading_time` time NOT NULL,
+  `arrival_destination_date` date NOT NULL,
+  `arrival_destination_time` time NOT NULL,
+  `start_unloading_date` date NOT NULL,
+  `start_unloading_time` time NOT NULL,
+  `finish_unloading_date` date NOT NULL,
+  `finish_unloading_time` time NOT NULL,
+  `origin_name` varchar(100) NOT NULL,
+  `origin_address` varchar(100) NOT NULL,
+  `origin_area` varchar(100) NOT NULL,
+  `destination_name` varchar(100) NOT NULL,
+  `destination_address` varchar(100) NOT NULL,
+  `destination_area` varchar(100) NOT NULL,
+  `created_by` varchar(100) NOT NULL,
+  `created_date` date NOT NULL,
+  `created_time` time NOT NULL,
+  `updated_by` varchar(100) NOT NULL,
+  `updated_date` date NOT NULL,
+  `updated_time` time NOT NULL,
+  `do_number` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `traffic_monitoring_export`
 --
 
@@ -2039,8 +2102,8 @@ CREATE TABLE `traffic_monitoring_langsir` (
 --
 
 INSERT INTO `traffic_monitoring_langsir` (`id_traffic_monitoring_langsir`, `manifest`, `spk_number`, `state`, `point_id`, `name`, `address`, `arrival_estimation_date`, `arrival_estimation_time`, `arrival_actual_date`, `arrival_actual_time`, `loading_landing_start_date`, `loading_landing_start_time`, `loading_landing_finish_date`, `loading_landing_finish_time`, `loading_landing_documentation_date`, `loading_landing_documentation_time`, `departure_estimation_date`, `departure_estimation_time`, `departure_actual_date`, `departure_actual_time`, `landing_location`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES
-(1, 2, 2, 'origin', 'IMB', 'PT Indah Maju Bersama', 'Jalan Perancis No. 1 Belawan', '2018-05-02', '03:15 PM', '2018-05-09', '03:15 PM', '0000-00-00', '', '0000-00-00', '', '0000-00-00', '', '0000-00-00', '', '0000-00-00', '', '', '', '2018-05-01 08:14:13', 'admin', '2018-05-01 07:14:13'),
-(3, 2, 2, 'destination', 'APB', 'PT Trouw Nutrition Indonesia', 'Jalan Anugerah No. 2 Medan', '0000-00-00', '', '2018-03-10', '08:53 AM', '2018-03-10', '08:54 AM', '2018-03-10', '08:55 AM', '2018-03-10', '08:55 AM', '0000-00-00', '', '2018-03-10', '08:59 AM', 'Depo', '', '2018-03-10 07:59:11', '', '0000-00-00 00:00:00');
+(1, 2, 2, 'origin', 'IMB', 'PT Indah Maju Bersama', 'Jalan Perancis No. 1 Belawan', '2018-05-11', '09:00 AM', '2018-05-10', '11:15 PM', '0000-00-00', '', '0000-00-00', '', '0000-00-00', '', '0000-00-00', '', '0000-00-00', '', '', '', '2018-05-07 02:23:00', 'admin', '2018-05-07 01:23:00'),
+(3, 2, 2, 'destination', 'APB', 'PT Anugerah Persada Bersama', 'Jalan Anugerah No. 2 Medan', '2018-05-06', '01:31 PM', '2018-05-06', '01:31 PM', '0000-00-00', '', '0000-00-00', '', '0000-00-00', '', '0000-00-00', '', '0000-00-00', '', 'Depo', '', '2018-05-06 06:31:51', 'admin', '2018-05-06 05:31:51');
 
 -- --------------------------------------------------------
 
@@ -2248,12 +2311,18 @@ CREATE TABLE `transport_order` (
   `pod` varchar(255) NOT NULL,
   `do_number` varchar(255) NOT NULL,
   `reference` varchar(255) NOT NULL,
+  `req_pick_up_date` date NOT NULL,
+  `req_pick_up_time` time NOT NULL,
+  `req_delivery_date` date NOT NULL,
+  `req_delivery_time` time NOT NULL,
   `delivery_date` date NOT NULL,
-  `delivery_time` varchar(50) NOT NULL,
+  `delivery_time` time NOT NULL,
   `origin_id` varchar(255) NOT NULL,
+  `origin_name` varchar(100) NOT NULL,
   `origin_address` varchar(255) NOT NULL,
   `origin_area` varchar(255) NOT NULL,
   `destination_id` varchar(255) NOT NULL,
+  `destination_name` varchar(100) NOT NULL,
   `destination_address` varchar(255) NOT NULL,
   `destination_area` varchar(255) NOT NULL,
   `client_id` varchar(50) NOT NULL,
@@ -2262,13 +2331,14 @@ CREATE TABLE `transport_order` (
   `document_time` varchar(50) NOT NULL,
   `order_type` varchar(50) NOT NULL,
   `posting_date` date NOT NULL,
-  `status` varchar(50) NOT NULL,
+  `status` varchar(50) NOT NULL DEFAULT 'Open',
   `status_to` varchar(255) NOT NULL,
   `remark` varchar(255) NOT NULL,
   `actual_qty` int(11) NOT NULL,
   `reason` varchar(255) NOT NULL,
   `trip` int(11) NOT NULL,
-  `qty` varchar(50) NOT NULL,
+  `qty` varchar(50) NOT NULL DEFAULT '0',
+  `uom` varchar(100) NOT NULL,
   `volume` varchar(50) NOT NULL,
   `weight` varchar(50) NOT NULL,
   `cargo_type` varchar(50) NOT NULL,
@@ -2292,10 +2362,12 @@ CREATE TABLE `transport_order` (
 -- Dumping data untuk tabel `transport_order`
 --
 
-INSERT INTO `transport_order` (`spk_number`, `manifest`, `pod_number`, `pod_confirmed`, `pod`, `do_number`, `reference`, `delivery_date`, `delivery_time`, `origin_id`, `origin_address`, `origin_area`, `destination_id`, `destination_address`, `destination_area`, `client_id`, `client_name`, `document_date`, `document_time`, `order_type`, `posting_date`, `status`, `status_to`, `remark`, `actual_qty`, `reason`, `trip`, `qty`, `volume`, `weight`, `cargo_type`, `si`, `hawb`, `mawb`, `notes`, `invoice_number_to_client`, `invoice_number_to_client_date`, `invoice_number_from_supplier`, `invoice_number_from_supplier_date`, `id_detail_trucking_order`, `id_trucking_order`, `created_by`, `created_date`, `updated_by`, `updated_date`) VALUES
-(1, 4, '', '', '', '223', 'wwee', '2018-05-01', '07:00 AM', 'IMB', 'Jalan Perancis No. 1 Belawan', 'BELAWAN', 'APB', 'Jalan Anugerah No. 2 Medan', 'MEDAN', 'TNI', 'PT Trouw Nutrition Indonesia', '2018-04-04', '07:00 AM', 'Regular', '2018-04-04', '', '', '23232', 0, '', 1, '', '', '', 'Pile', '', '', '', '', '', '0000-00-00', '', '0000-00-00', 3, 1, 'admin', '2018-05-01 08:12:04', '', '0000-00-00 00:00:00'),
-(2, 2, '', '', '', '123', '123', '2018-05-01', '07:15 PM', 'IMB', 'Jalan Perancis No. 1 Belawan', 'BELAWAN', 'APB', 'Jalan Anugerah No. 2 Medan', 'MEDAN', 'SFT', 'SOFTEX INDONESIA', '2018-05-01', '07:15 PM', 'Langsir', '2018-05-01', '', '', '', 0, '', 1, '', '', '', '', '', '', '', '', '', '0000-00-00', '', '0000-00-00', 0, 0, 'admin', '2018-05-01 07:25:53', '', '0000-00-00 00:00:00'),
-(3, 8, '', '', '', 'test123', 'test123', '2018-05-03', '03:45 PM', 'IMB', 'Jalan Perancis No. 1 Belawan', 'BELAWAN', 'APB', 'Jalan Anugerah No. 2 Medan', 'MEDAN', 'TNI', 'PT Trouw Nutrition Indonesia', '2018-05-03', '03:45 PM', 'Langsir', '2018-05-03', '', '', '', 0, '', 2, '', '', '', '', '', '', '', '', '', '0000-00-00', '', '0000-00-00', 0, 0, 'admin', '2018-05-03 11:06:38', '', '0000-00-00 00:00:00');
+INSERT INTO `transport_order` (`spk_number`, `manifest`, `pod_number`, `pod_confirmed`, `pod`, `do_number`, `reference`, `req_pick_up_date`, `req_pick_up_time`, `req_delivery_date`, `req_delivery_time`, `delivery_date`, `delivery_time`, `origin_id`, `origin_name`, `origin_address`, `origin_area`, `destination_id`, `destination_name`, `destination_address`, `destination_area`, `client_id`, `client_name`, `document_date`, `document_time`, `order_type`, `posting_date`, `status`, `status_to`, `remark`, `actual_qty`, `reason`, `trip`, `qty`, `uom`, `volume`, `weight`, `cargo_type`, `si`, `hawb`, `mawb`, `notes`, `invoice_number_to_client`, `invoice_number_to_client_date`, `invoice_number_from_supplier`, `invoice_number_from_supplier_date`, `id_detail_trucking_order`, `id_trucking_order`, `created_by`, `created_date`, `updated_by`, `updated_date`) VALUES
+(21, 12, '', '', '', '123', '123', '2018-05-12', '04:15:00', '2018-05-12', '04:15:00', '2018-05-12', '00:00:00', 'IMB', 'PT Indah Maju Bersama', 'Jalan Perancis No. 1 Belawan', 'BELAWAN', 'APB', 'PT Anugerah Persada Bersama', 'Jalan Anugerah No. 2 Medan', 'MEDAN', 'TNI', 'PT Trouw Nutrition Indonesia', '0000-00-00', '', 'Regular', '0000-00-00', 'Open', '', '', 0, '', 1, '', '', '', '', '', '', '', '', '', '', '0000-00-00', '', '0000-00-00', 0, 0, 'admin', '2018-05-12 12:33:27', '', '0000-00-00 00:00:00'),
+(22, 0, '', '', '', '123', '123', '2018-05-12', '04:15:00', '2018-05-12', '04:15:00', '2018-05-12', '00:00:00', 'IMB', 'PT Indah Maju Bersama', 'Jalan Perancis No. 1 Belawan', 'BELAWAN', 'APB', 'PT Anugerah Persada Bersama', 'Jalan Anugerah No. 2 Medan', 'MEDAN', 'TNI', 'PT Trouw Nutrition Indonesia', '0000-00-00', '', 'Regular', '0000-00-00', 'Open', '', '', 0, '', 0, '', '', '', '', '', '', '', '', '', '', '0000-00-00', '', '0000-00-00', 0, 0, 'admin', '2018-05-12 12:33:11', '', '0000-00-00 00:00:00'),
+(23, 0, '', '', '', '123', '123', '2018-05-12', '04:15:00', '2018-05-12', '04:15:00', '0000-00-00', '00:00:00', 'IMB', 'PT Indah Maju Bersama', 'Jalan Perancis No. 1 Belawan', 'BELAWAN', '15061942', 'PT. INTI BUANA RAYA', 'JL.DIPONEGORO (SMPING HARDYS) LINGK', 'KARANGASEM', 'SFT', 'SOFTEX INDONESIA', '0000-00-00', '', 'Regular', '0000-00-00', 'Open', '', '', 0, '', 0, '', '', '', '', '', '', '', '', '', '', '0000-00-00', '', '0000-00-00', 0, 0, 'admin', '2018-05-12 11:31:07', '', '0000-00-00 00:00:00'),
+(24, 12, '', '', '', '123', '123', '2018-05-12', '04:15:00', '2018-05-12', '04:15:00', '2018-05-12', '00:00:00', 'IMB', 'PT Indah Maju Bersama', 'Jalan Perancis No. 1 Belawan', 'BELAWAN', '15061942', 'PT. INTI BUANA RAYA', 'JL.DIPONEGORO (SMPING HARDYS) LINGK', 'KARANGASEM', 'TNI', 'PT Trouw Nutrition Indonesia', '0000-00-00', '', 'Regular', '0000-00-00', 'Open', '', '', 0, '', 1, '', '', '', '', '', '', '', '', '', '', '0000-00-00', '', '0000-00-00', 0, 0, 'admin', '2018-05-12 12:33:37', '', '0000-00-00 00:00:00'),
+(25, 12, '', '', '', '123', '123', '2018-05-12', '04:15:00', '2018-05-12', '04:15:00', '2018-05-12', '00:00:00', 'APB', 'PT Anugerah Persada Bersama', 'Jalan Anugerah No. 2 Medan', 'MEDAN', '15061161', 'PT.FAJAR MULIA ABADI - BL', 'JL.BLORA-CEPU KM 3 KEL.BANGKLE KEC.', 'BLORA', 'TNI', 'PT Trouw Nutrition Indonesia', '0000-00-00', '', 'Regular', '0000-00-00', 'Open', '', '', 0, '', 1, '', '', '', '', '', '', '', '', '', '', '0000-00-00', '', '0000-00-00', 0, 0, 'admin', '2018-05-12 12:37:01', '', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -2843,6 +2915,12 @@ ALTER TABLE `driver_absence`
   ADD PRIMARY KEY (`id_absence`);
 
 --
+-- Indeks untuk tabel `driver_login_token`
+--
+ALTER TABLE `driver_login_token`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `email_receiver`
 --
 ALTER TABLE `email_receiver`
@@ -3283,6 +3361,12 @@ ALTER TABLE `driver_absence`
   MODIFY `id_absence` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
+-- AUTO_INCREMENT untuk tabel `driver_login_token`
+--
+ALTER TABLE `driver_login_token`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
 -- AUTO_INCREMENT untuk tabel `email_receiver`
 --
 ALTER TABLE `email_receiver`
@@ -3328,7 +3412,7 @@ ALTER TABLE `location_type`
 -- AUTO_INCREMENT untuk tabel `login_attempts`
 --
 ALTER TABLE `login_attempts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `log_report`
@@ -3394,7 +3478,7 @@ ALTER TABLE `master_io`
 -- AUTO_INCREMENT untuk tabel `master_manifest`
 --
 ALTER TABLE `master_manifest`
-  MODIFY `id_manifest` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_manifest` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT untuk tabel `master_po`
@@ -3598,7 +3682,7 @@ ALTER TABLE `transporter_rate`
 -- AUTO_INCREMENT untuk tabel `transport_order`
 --
 ALTER TABLE `transport_order`
-  MODIFY `spk_number` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `spk_number` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT untuk tabel `truck_absent`
