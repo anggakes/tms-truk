@@ -96,6 +96,7 @@ class Model_manifest extends CI_Model{
     }
 
     public function updateTrafficMonitoring($manifestId, $data){
+        
 
         $this->db->where('id_manifest', $manifestId);
         $res = $this->db->update('traffic_monitoring', $data);

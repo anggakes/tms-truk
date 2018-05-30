@@ -160,8 +160,8 @@ class Order extends CI_Controller {
             'allowed_types' => "jpg|jpeg|png",
             'overwrite' => TRUE,
             'max_size' => "2048000", // Can be set to particular file size , here it is 2 MB(2048 Kb)
-            'max_height' => "1024",
-            'max_width' => "1024"
+//            'max_height' => "1024",
+//            'max_width' => "1024"
         );
 
         $this->load->library('upload', $config);
@@ -179,6 +179,7 @@ class Order extends CI_Controller {
             }
 
             $uploadRes = $this->upload->data()['file_name'];
+            $this->model_transport_order_photo->delete($manifestId, $status);
             $this->model_transport_order_photo->insert($manifestId, $status, base_url('files/images/'.$uploadRes));
 
         }
@@ -389,8 +390,8 @@ class Order extends CI_Controller {
             'allowed_types' => "jpg|jpeg|png",
             'overwrite' => TRUE,
             'max_size' => "2048000", // Can be set to particular file size , here it is 2 MB(2048 Kb)
-            'max_height' => "1024",
-            'max_width' => "1024"
+//            'max_height' => "1024",
+//            'max_width' => "1024"
         );
 
         $this->load->library('upload', $config);
@@ -410,6 +411,8 @@ class Order extends CI_Controller {
             }
 
             $uploadRes = $this->upload->data()['file_name'];
+
+            $this->model_transport_order_photo->delete($spkNumber, $status);
             $this->model_transport_order_photo->insert($spkNumber, $status, base_url('files/images/'.$uploadRes));
 
         }
@@ -464,6 +467,12 @@ class Order extends CI_Controller {
 
         if(!$res) return $this->apilib->responseNotFound($this);
 
+        $this->model_transport_order_api->updateTrafficMonitoring($spkNumber, [
+            'finish_unloading_date' => date('Y-m-d'),
+            'finish_unloading_time' => date('H:i:s'),
+            'status' => $status
+        ]);
+
 
         $this->model_transport_order_api->updateTrafficMonitoring($spkNumber, [
             'status' => $status
@@ -493,13 +502,15 @@ class Order extends CI_Controller {
 
     public function history(){
 
+        $filterDate = isset($_GET['date']) ? $_GET['date'] : '' ;
+
         $userId = $this->apilib->isValidToken($this);
 
         if($userId === false) return $this->apilib->responseUnauthorized($this);
 
         $driver = $this->apilib->getDriver($userId);
 
-        $res = $this->model_transport_order_api->allByDriverFinished($driver->driver_code);
+        $res = $this->model_transport_order_api->allByDriverFinished($driver->driver_code, $filterDate);
 
         return $this->apilib->response($this, $res, 200);
 

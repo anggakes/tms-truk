@@ -9,11 +9,18 @@
 class model_driver_login_token extends CI_Model
 {
 
-    public function insert($driverId, $token){
+    public function insert($driverId, $token, $pushNotifId){
         $data = [
             'driver_id'  => $driverId,
             'token' => $token,
+            'push_notification_id' => $pushNotifId
         ];
+
+        $this->db->delete('driver_login_token',array(
+            "driver_id" => $driverId,
+            'push_notification_id' => $pushNotifId
+        ));
+
         $res = $this->db->insert('driver_login_token',$data);
         return $res;
     }

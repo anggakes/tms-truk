@@ -24,6 +24,7 @@ class Auth extends CI_Controller {
 
         $username  = $_POST['username'];
         $password = $_POST['password'];
+        $pushNotifId = $_POST['push_notification_id'];
 
         $driver = $this->model_driver->getDriver('WHERE driver_code = "'.$username.'"')->result();
 
@@ -50,7 +51,7 @@ class Auth extends CI_Controller {
 
         // set auth token:
         $token =  md5(uniqid());
-        $res = $this->model_driver_login_token->insert($driver['id_driver'], $token);
+        $res = $this->model_driver_login_token->insert($driver['id_driver'], $token, $pushNotifId);
         if(!$res) $this->apilib->responseInternalError();
 
         return  $this->apilib->response($this, [
