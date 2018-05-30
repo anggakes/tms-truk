@@ -19,7 +19,8 @@
     $accuracy       = isset($_GET['accuracy']) ? $_GET['accuracy'] : 0;
     $extrainfo      = isset($_GET['extrainfo']) ? $_GET['extrainfo'] : '';
     $eventtype      = isset($_GET['eventtype']) ? $_GET['eventtype'] : '';
-    
+    $spkNumber      = isset($_GET['spknumber']) ? $_GET['spknumber'] : '';
+
     // doing some validation here
     if ($latitude == 0 && $longitude == 0) {
         exit('-1');
@@ -37,7 +38,9 @@
                     ':sessionid'       => $sessionid,
                     ':accuracy'        => $accuracy,
                     ':extrainfo'       => $extrainfo,
-                    ':eventtype'       => $eventtype
+                    ':eventtype'       => $eventtype,
+                    ':spkNumber'       => $spkNumber,
+
                 );
 
     switch ($dbType) {
