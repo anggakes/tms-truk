@@ -125,6 +125,7 @@ class Order extends CI_Controller {
 
         $manifestId = $_POST['manifest_id'];
         $status = 'selesai muat';
+        $status_foto = 'manifest';
         $actualQty = $_POST['actual_qty'];
 
         $userId = $this->apilib->isValidToken($this);
@@ -180,7 +181,8 @@ class Order extends CI_Controller {
 
             $uploadRes = $this->upload->data()['file_name'];
             $this->model_transport_order_photo->delete($manifestId, $status);
-            $this->model_transport_order_photo->insert($manifestId, $status, base_url('files/images/'.$uploadRes));
+            $this->model_transport_order_photo->insert($manifestId, $status_foto, base_url('files/images/'.$uploadRes));
+
 
         }
 
@@ -197,7 +199,7 @@ class Order extends CI_Controller {
             }
 
             $uploadRes = $this->upload->data()['file_name'];
-            $this->model_transport_order_photo->insert($manifestId, $status, base_url('files/images/'.$uploadRes));
+            $this->model_transport_order_photo->insert($manifestId, $status_foto, base_url('files/images/'.$uploadRes));
         }
 
 
@@ -211,6 +213,7 @@ class Order extends CI_Controller {
 
         $type = 'loading';
         $status = 'tidak terkirim';
+        $status_foto = 'manifest';
 
         if(!isset($_POST['manifest_id']))
             return $this->apilib->response($this, ['message' => 'manifest_id not set', 'code' => 0], 400);
@@ -240,6 +243,55 @@ class Order extends CI_Controller {
         $res = $this->model_manifest->update($manifestId, [
             'status_manifest' => 'selesai'
         ]);
+
+
+        // upload images
+
+        $config = array(
+            'upload_path' => "./files/images",
+            'allowed_types' => "jpg|jpeg|png",
+            'overwrite' => TRUE,
+            'max_size' => "2048000", // Can be set to particular file size , here it is 2 MB(2048 Kb)
+            // 'max_height' => "1024",
+            // 'max_width' => "1024"
+        );
+
+        $this->load->library('upload', $config);
+
+        if(isset($_FILES['photo_1'])){
+            if(!$this->upload->do_upload('photo_1'))
+            {
+                $error = array(
+                    'errors' => $this->upload->display_errors(),
+                    'message' => 'error upload',
+                    'code' => 0
+                );
+
+                return $this->apilib->response($this, $error, 400);
+            }
+
+            $uploadRes = $this->upload->data()['file_name'];
+            $this->model_transport_order_photo->insert($manifestId, $status_foto, base_url('files/images/'.$uploadRes));
+
+        }
+
+        if(isset($_FILES['photo_2'])){
+            if(!$this->upload->do_upload('photo_2'))
+            {
+                $error = array(
+                    'errors' => $this->upload->display_errors(),
+                    'message' => 'error upload',
+                    'code' => 0
+                );
+
+                return $this->apilib->response($this, $error, 400);
+            }
+
+            $uploadRes = $this->upload->data()['file_name'];
+            $this->model_transport_order_photo->insert($manifestId, $status_foto, base_url('files/images/'.$uploadRes));
+        }
+
+
 
         return $this->apilib->response($this, $res, 200);
 
@@ -348,6 +400,7 @@ class Order extends CI_Controller {
 
         $spkNumber = $_POST['spk_number'];
         $status = 'terkirim';
+        $status_foto = 'spk';
         $actualQty = $_POST['actual_qty'];
 
         $userId = $this->apilib->isValidToken($this);
@@ -413,7 +466,7 @@ class Order extends CI_Controller {
             $uploadRes = $this->upload->data()['file_name'];
 
             $this->model_transport_order_photo->delete($spkNumber, $status);
-            $this->model_transport_order_photo->insert($spkNumber, $status, base_url('files/images/'.$uploadRes));
+            $this->model_transport_order_photo->insert($spkNumber, $status_foto, base_url('files/images/'.$uploadRes));
 
         }
 
@@ -430,7 +483,7 @@ class Order extends CI_Controller {
             }
 
             $uploadRes = $this->upload->data()['file_name'];
-            $this->model_transport_order_photo->insert($spkNumber, $status, base_url('files/images/'.$uploadRes));
+            $this->model_transport_order_photo->insert($spkNumber, $status_foto, base_url('files/images/'.$uploadRes));
         }
 
 
@@ -453,6 +506,7 @@ class Order extends CI_Controller {
 
         $type = 'unloading';
         $status = 'tidak terkirim';
+        $status_foto = 'spk';
         $spkNumber = $_POST['spk_number'];
         $reason  = $_POST['reason'];
 
@@ -488,6 +542,56 @@ class Order extends CI_Controller {
                 'status_manifest' => 'selesai'
             ]);
         }
+
+
+        // upload images
+
+        $config = array(
+            'upload_path' => "./files/images",
+            'allowed_types' => "jpg|jpeg|png",
+            'overwrite' => TRUE,
+            'max_size' => "2048000", // Can be set to particular file size , here it is 2 MB(2048 Kb)
+            // 'max_height' => "1024",
+            // 'max_width' => "1024"
+        );
+
+        $this->load->library('upload', $config);
+
+        $uploadRes = [];
+
+        if(isset($_FILES['photo_1'])){
+            if(!$this->upload->do_upload('photo_1'))
+            {
+                $error = array(
+                    'errors' => $this->upload->display_errors(),
+                    'message' => 'error upload',
+                    'code' => 0
+                );
+
+                return $this->apilib->response($this, $error, 400);
+            }
+
+            $uploadRes = $this->upload->data()['file_name'];
+            $this->model_transport_order_photo->insert($spkNumber, $status_foto, base_url('files/images/'.$uploadRes));
+
+        }
+
+        if(isset($_FILES['photo_2'])){
+            if(!$this->upload->do_upload('photo_2'))
+            {
+                $error = array(
+                    'errors' => $this->upload->display_errors(),
+                    'message' => 'error upload',
+                    'code' => 0
+                );
+
+                return $this->apilib->response($this, $error, 400);
+            }
+
+            $uploadRes = $this->upload->data()['file_name'];
+            $this->model_transport_order_photo->insert($spkNumber, $status_foto, base_url('files/images/'.$uploadRes));
+        }
+
 
         $res = $this->model_transport_order_api->detail($spkNumber);
 
