@@ -210,6 +210,7 @@ class Order extends CI_Controller {
     public function failedLoading(){
 
         $this->load->model('model_transport_order_cancel_reason');
+        $this->load->model('model_transport_order_photo');
 
         $type = 'loading';
         $status = 'tidak terkirim';
@@ -498,6 +499,7 @@ class Order extends CI_Controller {
     public function failedUnLoading(){
 
         $this->load->model('model_transport_order_cancel_reason');
+        $this->load->model('model_transport_order_photo');
 
         if(!isset($_POST['spk_number']))
             return $this->apilib->response($this, ['message' => 'spk_number not set', 'code' => 0], 400);
