@@ -82,7 +82,7 @@ class Model_transport_order_api extends CI_Model{
               tro.destination_area,
               tro.destination_name,
               tro.destination_address,
-              tm.finish_unloading_date as finish_unloading_date,
+              tm.finish_unloading_date ,
               tro.status as do_status,
               origin.customer_latitude as origin_latitude,
               origin.customer_longitude as origin_longitude,
@@ -99,7 +99,7 @@ class Model_transport_order_api extends CI_Model{
                     AND  tm.status IN ('terkirim', 'tidak terkirim')
                     -- OR mm.status_manifest is NULL OR mm.status_manifest = ''
                     $where
-              ORDER BY finish_unloading_date DESC
+              ORDER BY tm.finish_unloading_date DESC
               ";
 
         $do = $this->db->query($q)->result();
